@@ -94,3 +94,10 @@ firstPar.addEventListener("click", function () {
     firstPar.classList.add("green");
   }
 });
+
+const thirdPar = document.querySelector(".thirdParagraph");
+
+thirdPar.addEventListener("click", function () {
+  thirdPar.classList.toggle("blue");
+  thirdPar.classList.toggle("yellow");
+});
