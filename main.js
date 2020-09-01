@@ -16,14 +16,36 @@ paragraphsContent.forEach(function (currentValue, currentIndex) {
   console.log(`paragraph number ${currentIndex}`, currentValue);
 });
 
-debugger;
+//debugger; - debugguje nam kod step by step
 
 firstBlock.innerText = "hello";
-debugger;
 const secondParagraph = document.querySelector(".secondParagraph");
 
 console.dir(secondParagraph);
-debugger;
 secondParagraph.className += " newClass";
-debugger;
 secondParagraph.classList.add("anotherClass"); //poprawniejsze rozwiązanie
+
+/* tworzenie elementów w html */
+const newElement = document.createElement("div");
+newElement.innerText = "Przykładowa zawartość nowego diva";
+
+const div = document.querySelector("#firstBlock");
+div.appendChild(newElement);
+
+/* Wewnątrz elementu wstaw 3 paragrafy, o dowolnej treści. 
+Dotychczasowa treść elementu, nie powinna być dostępna */
+
+div.innerHTML = "";
+
+const newParagraph1 = document.createElement("p");
+const newParagraph2 = document.createElement("p");
+const newParagraph3 = document.createElement("p");
+
+newParagraph1.innerText = "Lorem1";
+newParagraph2.innerText = "Lorem2";
+newParagraph3.innerText = "Lorem3";
+
+const p = document.querySelector("#firstBlock");
+p.appendChild(newParagraph1);
+p.appendChild(newParagraph2);
+p.appendChild(newParagraph3);
