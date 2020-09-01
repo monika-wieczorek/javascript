@@ -72,3 +72,25 @@ const divAfter = document.querySelector("#firstBlock");
 const body = document.querySelector("body");
 
 body.insertBefore(newEl, divAfter);
+
+//issue #5
+
+// const body2 = document.querySelector("body");
+
+// body2.innerHTML = "";
+
+// for (i = 1; i < 20; i++) {
+//   const div = document.createElement("div");
+// }
+
+const firstPar = document.querySelector(".firstParagraph");
+
+firstPar.addEventListener("click", function () {
+  if (firstPar.classList.contains("green")) {
+    firstPar.classList.remove("green");
+    firstPar.classList.add("red");
+  } else {
+    firstPar.classList.remove("red");
+    firstPar.classList.add("green");
+  }
+});
