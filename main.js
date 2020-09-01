@@ -49,3 +49,14 @@ const p = document.querySelector("#firstBlock");
 p.appendChild(newParagraph1);
 p.appendChild(newParagraph2);
 p.appendChild(newParagraph3);
+
+//alternatywne rozwiązanie
+
+firstBlock.innerHTML = "";
+
+for (let i = 1; i < 4; i++) {
+  const newElement = document.createElement("p");
+  newElement.innerText = i;
+
+  firstBlock.appendChild(newElement); //wstaw zawartość na końcu elementu
+}
