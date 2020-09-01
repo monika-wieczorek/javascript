@@ -60,3 +60,15 @@ for (let i = 1; i < 4; i++) {
 
   firstBlock.appendChild(newElement); //wstaw zawartość na końcu elementu
 }
+
+//wstawianie elementów przed
+const newEl = document.createElement("div");
+
+newEl.id = "preFirstBlock";
+
+newEl.innerText = "Lorem1";
+
+const divAfter = document.querySelector("#firstBlock");
+const body = document.querySelector("body");
+
+body.insertBefore(newEl, divAfter);
